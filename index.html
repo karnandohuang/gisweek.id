@@ -10,7 +10,18 @@
     <meta content='GIS Week is a creative event held once a year that aims to introduce Geographic Information System technology, a technology that has already been utilized worldwide, to Indonesian Communities.'/>
     <meta content="GIS ,gisweek, esri indonesia, gis week, gis week 2018, gisweek 2018" name="keywords"/>
     <link rel='icon' href="gisweek_asset/images/favicon.ico">
+
     
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127311259-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127311259-1');
+</script>
+
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="gisweek_asset/css/animate.css">
     <link rel="stylesheet" href="gisweek_asset/css/flexslider.css">
@@ -21,7 +32,20 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+    <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style>
+
+    <!-- Load Leaflet from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet/dist/esri-leaflet.js"></script>
+
+    <style>
+      html, body, #map {
+        margin:0; padding:0;  width : 100%; height : 100%;
+      }
+    </style>
   </head>
   <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
   
@@ -34,7 +58,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="" href="http://karnandohuang.xyz/gisweek"><img src="gisweek_asset/images/GISWEEK.png" width="120px"></a>
+        <a class="" href="http://gisweek.id"><img src="gisweek_asset/images/GISWEEK.png" width="120px"></a>
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
@@ -182,8 +206,8 @@
               </span>
               <h3>October 24th and 26th, 2018</h3>
               <h3 class="mb-4">Auditorium BINUS University Alam Sutera</h3>
-              <p><strong><i>“GIS The Golden Thread of Industry of 4.0 and Transformation of Technology in Indonesia“</i></strong> and <strong><i>“Big Data, A Big Driver in The Future of Actionable Intelligence“</i></strong> are the theme for this year's GIS Talkshow.<br> This talkshow is an event where experts from public, private and technology sector, and academia come together to discuss some of the most important topics of this era. Our speakers will talk about the challenges of the Industrial Revolution 4.0, Smart Data Driven processes, and the potential of Geo Artificial Intelligent for automating workflow.</p>
-              <p> <a href="gisweek_asset/attachments/gis-talkshow-rundown.pdf" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
+              <p><strong><i>“GIS The Golden Thread of Industry of 4.0 and Transformation of Technology in Indonesia“</i></strong>   and <br><strong><i>“Big Data, A Big Driver in The Future of Actionable Intelligence“</i></strong></p>
+              <p> <a href="gis-talkshow.html" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 text-center mb-5">
@@ -194,9 +218,9 @@
               </span>
               <h3>October 24th, 2018</h3>
               <h3 class="mb-4">Auditorium BINUS University Alam Sutera</h3>
-              <p><strong><i>“Location Intelligence Solution”</i></strong> is the theme of this year's GIS Hacks. <strong>GIS Hacks</strong> is a competition among students or fresh graduate between 15 to 25 years old. The competition is open to teams throughout Indonesia. Registration and Prototype must be submitted before October 10th, 2018. Our judges will select five best teams to present in BINUS University and get a chance to be hired by reputable companies. The winners will be announced on the closing ceremony on October 26th, 2018.<br><br>Click here to register for GIS Hacks : </p>
-              <h4 class="mb-3"><a href="https://survey123.arcgis.com/share/12b7b392f9d44c559de10f91f90cecb6">Register Now !</a></h4>
-              <p> <a href="gisweek_asset/attachments/gis-hacks-rules.pdf" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
+              <p><strong><i>“Location Intelligence Solution”</i></strong> is the theme of this year's GIS Hacks. <strong>GIS Hacks</strong> is a competition among students or fresh graduate between 15 to 25 years old. The competition is open to teams throughout Indonesia. <br></p>
+
+              <p> <a href="gis-hacks.html" target="_blank">Finalists Announcement <i class="icon-chevron-right"></i></a></p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 text-center mb-5"> <!-- GISHacks --> 
@@ -207,8 +231,8 @@
               </span>
               <h3>October 26th, 2018</h3>
               <h3 class="mb-4">Auditorium BINUS University Alam Sutera</h3>
-              <p><strong><i>“Implementing GIS into Real Life with ArcGIS Platforms”</i></strong> is this year's theme for <strong>GIS Workshop</strong>. We have designed a workshop to teach you how to learn about developing apps using ArcGIS APIs and SDKs. You will be able to discover the latest GIS technology and do hands-on with two of our best Esri Indonesia trainers guiding you through. You can then go ahead and build your own apps to solve real life problems.</p>
-              <p> <a href="gisweek_asset/attachments/gis-workshop-rundown.pdf" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
+              <p><strong><i>“Implementing GIS into Real Life with ArcGIS Platforms”</i></strong> is this year's theme for <strong>GIS Workshop</strong>. We have designed a workshop to teach you how to learn about developing apps using ArcGIS APIs and SDKs.</p>
+              <p> <a href="gis-workshop.html" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
             </div>
           </div>
 
@@ -220,8 +244,8 @@
               </span>
               <h3>October 24th, 2018</h3>
               <h3 class="mb-4">Auditorium BINUS University Alam Sutera</h3>
-              <p><strong>GIS Industry Forum</strong> is a highly-interactive event that offers valuable opportunities to connect, network, and collaborate with fellow decision-makers and GIS expert in your industry. Gain a deeper understanding of GIS implementation in your industries through engagement with fellow industry professionals. The industries topic are Natural Resources 4.0, Business 4.0, and Smart Government 4.0.</p>
-              <p> <a href="gisweek_asset/attachments/gis-industry-forum-rundown.pdf" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
+              <p><strong>GIS Industry Forum</strong> is a highly-interactive event that offers valuable opportunities to connect, network, and collaborate with fellow decision-makers and GIS expert in your industry. The industries topic are Natural Resources 4.0, Business 4.0, and Smart Government 4.0.</p>
+              <p> <a href="gis-industry-forum.html" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 text-center mb-5">
@@ -232,8 +256,8 @@
               </span>
               <h3>October 25th, 2018</h3>
               <h3 class="mb-4">Lobby BINUS University Alam Sutera</h3>
-              <p>Get a chance to grow your skills and deepen your expertise in the latest technology - an interactive learning class where you can get best practice advice, product support and best ArcGIS tips and trick. Also expand your professional network and meet other analysts, developers, students, and like-minded professionals. Here are the 3 classes that will be available : Geoscience Class, Developer Class, and Business Analyst Class.</p>
-              <p> <a href="gisweek_asset/attachments/gis-technology-exploration-rundown.pdf" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
+              <p>Interactive learning classes where you can get best practice advice, product support and best ArcGIS tips and trick. Here are the 3 classes that will be available : Geoscience Class, Developer Class, and Business Analyst Class.</p><br>
+              <p> <a href="gis-technology-exploration.html" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 text-center mb-5"> <!-- GISWorkshop -->
@@ -245,7 +269,7 @@
               <h3>October 24-26th, 2018</h3>
               <h3 class="mb-4">Lobby BINUS University Alam Sutera</h3>
               <p><strong>GIS Gallery</strong> is an event that showcases technologies that implement geographic information system by BINUS, ESRI Indonesia, communities, and other partners. This gallery can help you understand the role of geographic information system.</p>
-              <!-- <p> <a href="http://esriindonesia.co.id/events/event-details/gis-week-2018-sed-504" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p> -->
+              <p> <a href="gis-gallery.html" target="_blank">Learn More <i class="icon-chevron-right"></i></a></p>
             </div>
           </div>
 
@@ -288,8 +312,6 @@
             <p>We have special entrance ticket prices just for you.</p>
 
             <ul class="site-list">
-              <li class="site-check">Early birds get cheaper tickets</li>
-              <li class="site-check">Early bird tickets available until October 12th</li>
               <li class="site-check">Workshop tickets are limited to 60 people</li>
               <li class="site-check">GIS Hacks is <strong>FREE</strong> !</li>
             </ul>
@@ -299,7 +321,7 @@
 
         <div class="row site-section">
           <div class="col-md-6 order-md-2 view-info">
-            <p><a href="gisweek_asset/attachments/agenda.pdf" target="_blank"><img src="gisweek_asset/images/agenda.jpg" alt="" class="img-fluid" width="1280"></a></p>
+            <p><a href="gisweek_asset/attachments/agenda-new.pdf" target="_blank"><img src="gisweek_asset/images/agenda.jpg" alt="" class="img-fluid" width="1280"></a></p>
           </div>
           <div class="col-md-6 order-md-2 view-info">
 			<p><a href="gisweek_asset/attachments/sponsorship.pdf" target="_blank"><img src="gisweek_asset/images/sponsorship.jpg" alt="" class="img-fluid" width="1280"></a></p>
@@ -310,159 +332,7 @@
     </section>
 
 
-
-
- 
-    
-<!--     <section class="site-section bg-light">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-12">
-            <div class="section-heading text-center">
-              <h2>Client <strong>Testimonial</strong></h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-
-              <div class="block-47 d-flex mb-5">
-                <div class="block-47-image">
-                  <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid">
-                </div>
-                <blockquote class="block-47-quote">
-                  <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                  <cite class="block-47-quote-author">&mdash; Ethan McCown, CEO <a href="#">XYZ Inc.</a></cite>
-                </blockquote>
-              </div>
-
-          </div>
-          <div class="col-md-6">
-            
-            <div class="block-47 d-flex mb-5">
-                <div class="block-47-image">
-                  <img src="images/person_2.jpg" alt="Image placeholder" class="img-fluid">
-                </div>
-                <blockquote class="block-47-quote">
-                  <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                  <cite class="block-47-quote-author">&mdash; Craig Gowen, CEO <a href="#">XYZ Inc.</a></cite>
-                </blockquote>
-              </div>
-
-          </div>
-
-          <div class="col-md-6">
-            
-              <div class="block-47 d-flex mb-5">
-                <div class="block-47-image">
-                  <img src="images/person_3.jpg" alt="Image placeholder" class="img-fluid">
-                </div>
-                <blockquote class="block-47-quote">
-                  <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                  <cite class="block-47-quote-author">&mdash; Ethan McCown, CEO <a href="#">XYZ Inc.</a></cite>
-                </blockquote>
-              </div>
-
-          </div>
-          <div class="col-md-6">
-            
-            <div class="block-47 d-flex mb-5">
-                <div class="block-47-image">
-                  <img src="images/person_4.jpg" alt="Image placeholder" class="img-fluid">
-                </div>
-                <blockquote class="block-47-quote">
-                  <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                  <cite class="block-47-quote-author">&mdash; Craig Gowen, CEO <a href="#">XYZ Inc.</a></cite>
-                </blockquote>
-              </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
- -->    
-
-   <!--  <section class="site-section bg-light " id="section-resume">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mb-5">
-            <div class="section-heading text-center">
-              <h2>My <strong>Resume</strong></h2>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="mb-5">Education</h2>
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
-              <h3>Masteral in Information Technology</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              <span class="school">New York University</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2013 - Present Deacember.</span>
-              <h3>Masteral in Information Technology</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              <span class="school">New York University</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
-              <h3>Masteral in Information Technology</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              <span class="school">New York University</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2013 - Present Deacember.</span>
-              <h3>Masteral in Information Technology</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              <span class="school">New York University</span>
-            </div>
-
-          </div>
-          <div class="col-md-6">
-            
-
-            <h2 class="mb-5">Experience</h2>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
-              <h3>Lead Product Designer</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              <span class="school">Github</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
-              <h3>Lead Product Designer</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              <span class="school">Facebook</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
-              <h3>Lead Product Designer</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              <span class="school">Twitter</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
-              <h3>Lead Product Designer</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              <span class="school">Shopify</span>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-
-	<section class="site-section" id="section-contact">
+	<section class="site-section" id="section">
 	    <div class="container">
 	    	<div class="row">
 	    		<div class="col-md-12 mb-5">
@@ -479,6 +349,199 @@
 			</div>
 		</div>
 	</section>
+
+    <section class="site-section border-top pb-0"  id="section-services">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-12">
+            <div class="section-heading text-center">
+              <h2>Our <strong>Sponsors</strong></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-6 col-lg-6 text-center pb-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/telkom.png" width="325px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 text-center pb-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/microsoft.png" width="325px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 text-center pb-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/bluebird.png" width="325px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 text-center pb-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/hp.png" width="325px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 text-center pb-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/lenovo.png" width="325px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/waindo.png" height="125px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/muamalat.png" width="200px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/foi.png" width="125px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-4 text-center pb-4 pt-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/inovamap.png" width="200px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-4 text-center pb-4 pt-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/awantunai.png" width="200px"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-4 text-center pb-4 pt-4">
+            <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+              <span class="icon icon">
+                <span><img src="gisweek_asset/sponsor/nusajaya.png" width="165px"></span>
+              </span>
+          </div>
+        </div>
+          
+          
+          <div class="col-md-12">
+            <div class="section-heading text-center">
+              <h2>Our <strong>Media Partners</strong></h2>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-3 col-lg-3 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/eventkampus.png" width="175px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/shareevent.png" width="175px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/eventjakarta.png" width="200px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/bisnisindonesia.png" width="200px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/updatelomba.jpg" width="200px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/kabarkampus.jpg" width="200px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/eventseru.jpg" width="200px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/infolomba.jpg" width="125px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/eventapaja.jpg" width="175px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/eventindonesia.jpg" width="110px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/campuspedia.jpg" width="200px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/seputarevent.jpg" width="125px"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 text-center pb-4 pt-4">
+                <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                  <span class="icon icon">
+                    <span><img src="gisweek_asset/medpart/ruangevent.jpg" width="200px"></span>
+                  </span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
  
     <section class="site-section bg-light" id="section-contact">
       <div class="container">
@@ -492,7 +555,7 @@
           <div class="col-md-7 mb-5 mb-md-0">
             <h3 class="mb-5">Our Event Location</h3>
             <div class="google-maps">
-            	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.07829447541!2d106.64681484999998!3d-6.228146349999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbe0345c4c65%3A0xfbaf475ba0a7978d!2sBinus+University+-+Alam+Sutera!5e0!3m2!1sen!2sid!4v1536135575589" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.07829447541!2d106.64681484999998!3d-6.228146349999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbe0345c4c65%3A0xfbaf475ba0a7978d!2sBinus+University+-+Alam+Sutera!5e0!3m2!1sen!2sid!4v1536135575589" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
           <div class="col-md-5 pl-md-5">
@@ -525,7 +588,6 @@
         </div>
       </div>
     </section>
-
 
 
 
@@ -565,8 +627,7 @@
     <script src="gisweek_asset/js/custom.js"></script>
 
     <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="gisweek_asset/js/google-map.js"></script>
-
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="gisweek_asset/js/google-map.js"></script>    
   </body>
 </html>
